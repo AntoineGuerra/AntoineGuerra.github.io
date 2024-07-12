@@ -1,98 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pas de commande à la carte ici</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CV Clem</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        body, html {
-            height: 100%;
-            max-width: 100%;
-            margin: 0;
-            padding: 0 10px;
-            font-family: Arial, sans-serif;
-            /*display: flex;*/
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            background-color: #f4f4f4;
-            /*background-image: url('moquerie.webp');*/
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .img-wedding {
-            max-width: 100%;
-            /*border-radius: 10px;*/
-            animation: fadeIn 2s;
-            /*margin: 10px auto;*/
-            width: 100%;
 
-        }
-        .content {
-            /*background: rgba(0, 0, 0, 0.7);*/
-            background: rgba(168, 110, 69, .7);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-            text-align: center;
-            animation: fadeIn 3s;
-            margin-top: 50px;
-        }
-        h1 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            animation: fadeIn 3s;
-        }
-        p {
-            font-size: 1em;
-            margin: 0;
-            animation: fadeIn 4s;
-        }
-        .bubble {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 20px;
-            img {
+        .cv {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            @media (max-width: 800px) {
                 max-width: 100%;
+                padding: 0 20px;
+            }
+            @media (max-width: 450px) {
+                padding: 0 10px;
+                .imgcv {
+                    max-width: 100px;
+                    /*height: auto;*/
+                    /*height: 60px;*/
+                }
+                .grostitre {
+                    font-size: 16px;
+                }
+                .cv-section {
+                    .titre {
+                        font-size: 14px!important;
+                    }
+                }
+            }
+
+            .grostitre {
+                margin-left: auto;
+                margin-right: auto;
+                width: max-content;
+            }
+
+            .intro {
+                /*margin-bottom: 60px;*/
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                /*flex: 1;*/
+            }
+
+            .cv-section {
+                margin-bottom: 60px;
+
+                .titre {
+                    margin-bottom: -10px;
+                    margin-top: 50px;
+                    font-size: 20px;
+                }
+
+                .soustitre {
+                    list-style-type: none;
+                    margin-left: 2px;
+                }
             }
         }
-        .bubble::after {
-            content: 'Tu pensais vraiment pouvoir choisir ?';
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            /*background: rgba(73, 73, 73, 1);*/
-            background: rgba(177, 138, 112, .9);
-            /*background: rgba(254, 216, 119, 1);*/
-            padding: 10px;
-            border-radius: 10px;
-            white-space: nowrap;
-            color: white;
-            font-size: 1.2em;
+
+        .imgcv {
+            /*float:right*/
+            max-width: 200px;
+            display: block;
+            /*width: 100%;*/
+            /*height: auto;*/
+            object-fit: cover;
         }
+
+
+        .intro-conteneur {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        /*.skill-bar {*/
+        /*    width: 100px;*/
+        /*    height: 20px;*/
+        /*    background-color: #f1f1f1;*/
+        /*    overflow: hidden;*/
+        /*    position: relative;*/
+        /*}*/
+
+        /*.skill-bar-fill {*/
+        /*    content: '';*/
+        /*    height: 100%;*/
+
+        /*    transition: transform .5s ease;*/
+        /*    transform: translateX(-100%);*/
+        /*    width: 100%;*/
+        /*    position: absolute;*/
+        /*    top: 0;*/
+        /*    left: 0;*/
+        /*}*/
+
+
+        /*.skill-bar-orange {*/
+        /*    background-color: orange;*/
+        /*    z-index: 9;*/
+        /*}*/
+        /*.skill-bar-green {*/
+        /*    background-color: #00ff00;*/
+        /*    z-index: 10;*/
+        /*}*/
+        /*.skill-bar-red {*/
+        /*    background-color: #ff0000;*/
+        /*    z-index: 8;*/
+        /*}*/
+
+        /*.skill-bar:hover {*/
+        /*    .skill-bar-green {*/
+        /*        transform: translateX(-80%);*/
+        /*    }*/
+        /*    .skill-bar-red {*/
+        /*        transform: translateX(-20%);*/
+        /*    }*/
+        /*    .skill-bar-orange {*/
+        /*        transform: translateX(-40%);*/
+        /*    }*/
+        /*}*/
+
+
     </style>
 </head>
 <body>
-<img class="img-wedding" src="laurie-antoine-affiche.png"/>
-<div class="content">
-    <div class="bubble">
-        <img src="moquerie.webp" alt="Moquerie">
+<div class="cv">
+    <h1></h1>
+    <div class="intro-conteneur">
+        <div class="intro">
+            <span>Sahuquet Clément</span>
+            <span>27 ans</span>
+            <span>30 rue de la grande terre</span>
+            <span>69720 saint laurent de mure</span>
+            <span>Tel : <a href="tel:">0632781468</a></span>
+            <span>Mail : <a href="mailto:c.sahuquet@gmail.com">c.sahuquet@gmail.com</a></span>
+        </div>
+        <img src="./assets/images/IMG_0187.JPG" class="imgcv">
     </div>
-    <h1>Pas de commande à la carte ici</h1>
-    <p>C’est un mariage, tu t'es cru au restau ?</p>
+    <div class="cv-section form">
+        <h2 class="grostitre">FORMATIONS</h2>
+        <ul>
+            <li class="titre"><h4>2012-2013 Bac pro MEI : Maintenance des Equipements Industriels</h4></li>
+            <li class="soustitre">Lycée Jules Verne à Tarare 69170</li>
+            <li class="titre"><h4>2013-2015 Bac pro MEI en alternance avec la <a target="_blank"
+                                                                                 href="https://www.raffin-sa.com/realisations/112-technicentre-sncf-venissieux">SNCF</a>
+            </h4></li>
+            <li class="soustitre">Lycée Hector Guimard 69007</li>
+        </ul>
+    </div>
+    <div class="cv-section exp">
+        <h2 class="grostitre">EXPERIENCES PROFESSIONNELLES</h2>
+        <ul>
+            <li class="titre"><h4>2018-2024 Mécanicien monteur chez SANDVIK</h4></li>
+            <li class="soustitre">Montage de foreuse pour le secteur minière</li>
+            <li class="titre"><h4>2017-2018 Mécanicien monteur chez BOBST</h4></li>
+            <li class="soustitre">Montage de cartonneuse</li>
+            <li class="titre"><h4>2015-2017 Mécanicien monteur chez BMI FOURS</h4></li>
+            <li class="soustitre">Montage de fours industriels</li>
+        </ul>
+    </div>
+    <div class="cv-section ce">
+        <h2 class="grostitre">CENTRES D'INTERETS</h2>
+        <ul>
+            <li>Sport : crossfit</li>
+            <li>Bricolage</li>
+            <li>Voyage</li>
+            <li>Musique</li>
+        </ul>
+    </div>
+
+    <a id="clem" title="je suis"
+       target="_blank"
+       href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/1604646-creez-un-lien-hypertexte-en-html">
+        <em>clique</em>
+    </a>
+    </p>
+    <p></p>
+    <div class="skill-bar">
+        <div class="skill-bar-fill skill-bar-green"></div>
+        <div class="skill-bar-fill skill-bar-orange"></div>
+        <div class="skill-bar-fill skill-bar-red"></div>
+
+
+        <p></p>
+    </div>
 </div>
-<audio id="sound" src="laughter.mp3" autoplay></audio>
-<script>
-    window.onload = function() {
-        document.getElementById('sound').play();
-    }
-</script>
 </body>
 </html>
